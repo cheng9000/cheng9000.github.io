@@ -164,8 +164,6 @@ main{flex: 5;}
     background: turquoise;
 }
 .asideList{
-    /* display: flex;
-    flex-direction: column; */
     list-style-type: none;
     padding: 0;
 }

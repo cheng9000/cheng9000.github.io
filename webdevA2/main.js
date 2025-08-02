@@ -20,6 +20,9 @@ const nextbtn=document.getElementById("nextbtn");
 
 var allpages=document.querySelectorAll(".page");
 
+const moveAudio = new Audio(src="audio/Move.mp3");
+const captureAudio = new Audio(src="audio/Capture.mp3");
+
 const menuItemsList=document.querySelector("ul");
 const hamBtn=document.querySelector("#hamIcon");
 hamBtn.addEventListener("click",toggleMenus);
@@ -68,7 +71,8 @@ function AsideContent(topicNo){
             '   <li><a href="#topicContainer" class="asideButton">Go to Topic</a></li>' +
             '   <li><a href="#MM_title" class="asideButton">Go to Minigame</a></li>' +
             '</ul>';
-    }    
+    }
+    document.getElementById("Aside").innerHTML += '<img src="images/web_QR.png" alt="URL" width="100">';
 }
 function hideall(){ 
     for(let onepage of allpages){ 
@@ -150,6 +154,7 @@ function demoAnim(){
     function queenAnim(){
         console.log("Top:", topPos);
         if (topPos <= targetTop) {
+            moveAudio.play();
             clearInterval(move1);
             move2 = setInterval(kingAnim, interval);
         } else {
@@ -167,6 +172,7 @@ function demoAnim(){
         targetTop = 50;
         if (topPos_K >= targetTop) {
             white_knight.classList.add('hidden');
+            captureAudio.play();
             clearInterval(move2);
             move3 = setInterval(pawnAnim, interval);
         } else {
@@ -187,6 +193,7 @@ function demoAnim(){
             white_knight.style.left = leftPos_P + "px";
             white_knight.classList.remove('hidden');
             white_pawn.classList.add('hidden');
+            moveAudio.play();
             clearInterval(move3);
         } else {
             topPos_P += step;
