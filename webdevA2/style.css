@@ -193,7 +193,8 @@ main{flex: 5;}
     .type3{background-position:120px 0;}
     .type4{background-position:180px 0;}
     .type5{background-position:240px 0;}
-    .minigame_card.closed {background-size: 60px 80px;}    
+    .minigame_card.closed {background-size: 60px 80px;}
+    #Aside img {display: none;}    
     /*make a menu items vertical*/
     nav ul li{display:block;}
     /* unhide menu icon */
