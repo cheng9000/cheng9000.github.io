@@ -1,0 +1,207 @@
+.flexContainer{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    background-color: rgb(186, 255, 161);
+}
+header{
+    flex: 100%;
+    height: 100px;
+    text-align: center;
+    font-size: 150%;
+    font-family: Courier;
+    color: white;
+    background: url('images/chess_background.jpg') no-repeat center/cover;
+}
+nav{flex: 100%;text-align: center;}
+nav ul li{display:inline;}
+nav ul li button{
+    height: 30px;
+    width: 150px;
+    border: 2px solid rgb(111, 111, 111);
+    background-color: biege;
+}
+main{flex: 5;}
+
+.topic{
+    height:auto;
+    padding: 20px;
+    border:2px solid black;
+    display: block;
+}
+#topic1, #topic2, #topic3{background:rgb(176, 214, 117)}
+.topicTitle{font-size: 200%;}
+
+/* Main Topic */
+
+#T1summary{font-size: 150%;}
+.ModernTimeline{margin: 50px;}
+.ModernTimeline ul li{display: inline;}
+.ModernTimeline ul li button{height: 30px;width: 80px;}
+/* used to make timeline content take up space in the overall page */
+.pageContainer{
+    position: relative;
+    height: 50vh;
+}
+.page{
+    position: absolute;
+    width: 60vw;
+    height: 40vh;
+    padding: 30px;
+    font-size: 200%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease;
+    background: antiquewhite;
+}
+.show {
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;
+}
+.puzzleSection{text-align: center;}
+.puzzleContainer{
+    display: block;
+    left: 28vw;
+    position: relative;
+    width: 360px;
+    height: 360px;
+}
+.piece{position: absolute;left: 5px;top: 5px;width: 34px;}
+#black_king{left: 50px;}
+#white_king{left: 185px;}
+#white_knight{left: 5px;top: 50px;}
+#white_pawn{left: 50px;top: 50px;}
+#white_rook{left: 95px;top: 50px;}
+#white_queen{left: 185px;top: 320px;}
+
+
+/* Sub Topic 1 (origins of chess) */
+#T2summary{font-size: 150%;}
+.card {
+    width: 40vw;
+    height: 30vh;
+    background-color: rgb(255, 169, 123);
+    border: 5px solid black ;
+    margin: 50px;
+    padding: 10px;
+    font-size: 150%;
+    transform: translateX(100px);
+    transition: all 0.5s ease;
+}
+.card.visible {opacity: 1;transform: translateX(0);}
+.hidden {opacity: 0;}
+
+
+/* Sub Topic 2 (famous players) */
+#T3summary{font-size: 150%;}
+.profileContainer{
+    position: relative;
+    width: 60vw;
+    height: 70vh;
+    padding: 30px;
+    margin: 50px;
+    font-size: 200%;
+    background-color: antiquewhite;
+}
+.profilebtn{
+    position: absolute;
+    border: none;
+    color: black;
+    font-size: 150%;
+}
+#prevbtn{left: 0vw;top: 42vh;}
+#nextbtn{right: 0vw;top: 42vh;}
+.profile{
+    position: absolute;
+    width: 55vw;
+    height: 65vh;
+    padding: 20px;
+    font-size: 75%;
+    opacity: 0;
+    transform: translateY(0px);
+    transition: all 0s;
+    background-color: aliceblue;
+}
+.profile.visible{transition: all 0.5s ease;opacity: 1;}
+.profile.animate{transform: translateY(50px);opacity: 0;}
+
+#MM_title{text-align: center;}
+.MemoryMatch {
+    display: grid;
+    grid-template-columns: repeat(5, 160px);
+    gap: 10px;
+    justify-content: center;
+}
+.minigame_card {
+    width: 120px;
+    height: 160px;   
+    background-image: url('images/MMcard_sprite.png');
+    background-size: 600px 160px;
+    transform: rotateY(180deg);
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+.type1{background-position:0 0;}
+.type2{background-position:120px 0;}
+.type3{background-position:240px 0;}
+.type4{background-position:360px 0;}
+.type5{background-position:480px 0;}
+.minigame_card.closed {
+    background-image: url('images/card_back.png');
+    background-size: 120px 160px;
+    background-repeat: repeat;
+    transform: rotateY(360deg);
+}
+
+#Aside{
+    flex: 1;
+    top: 0;
+    height: 100vh;
+    position: sticky;
+    text-align: center;
+    border:2px solid black;
+    background: turquoise;
+}
+.asideList{
+    /* display: flex;
+    flex-direction: column; */
+    list-style-type: none;
+    padding: 0;
+}
+
+/*CSS for responsive menu*/
+#hamIcon{display:none;}
+
+@media screen and (max-width:800px){
+    header{font-size: 100%;}
+    #T1summary, #T2summary, #T3summary{font-size: 125%;}
+    /* made buttons bigger to fit in 3x2 format rather than the 1x6 in laptop screen */
+    .ModernTimeline ul li button{height: 40px;width: 120px;}
+    .puzzleSection{text-align: left;}
+    .puzzleContainer{left: 0;}
+    .page{width: 50vw;height: 45vh;font-size: 150%;}
+    .card{font-size: 125%;}
+    .profileContainer{width: 55vw;height: 85vh;}
+    .profile{font-size: 60%;width: 50vw;height: 80vh;}
+    .MemoryMatch {grid-template-columns: repeat(5, 80px);}
+    .minigame_card {
+        width: 60px;
+        height: 80px;
+        background-size: 300px 80px;
+    }
+    .type1{background-position:0 0;}
+    .type2{background-position:60px 0;}
+    .type3{background-position:120px 0;}
+    .type4{background-position:180px 0;}
+    .type5{background-position:240px 0;}
+    .minigame_card.closed {background-size: 60px 80px;}    
+    /*make a menu items vertical*/
+    nav ul li{display:block;}
+    /* unhide menu icon */
+    #hamIcon{display:block;}
+    /*hide the menu item list*/
+    nav ul{display:none;}
+}
+/*to unhide menu items*/
+.menuShow{display:block;}

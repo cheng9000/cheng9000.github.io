@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Page</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body class="flexContainer">
+    <header>
+        <h1 id="top">Chess history for dummies</h1>
+    </header>
+    <nav>
+        <!--hamburger icon for mobile-->
+        <button id="hamIcon">Open Menu</button>
+        <ul>
+            <li><button id="topic1btn">Modern Chess</button></li>
+            <li><button id="topic2btn">Origins</button></li>
+            <li><button id="topic3btn">Famous Players</button></li>
+        </ul>
+    </nav>
+    
+    <main id="topicContainer">
+        <section class="topic" id="topic1">
+            <h2 class="topicTitle">Modern Chess</h2>
+            <p id="T1summary">
+                While the entire history of chess dates back to the 7th century CE, 
+                the history of "modern" chess begins in 1861, when a time limit for 
+                making moves was introduced. The time limit was introduced to make 
+                matches more fair and competitive as people used to take several hours 
+                calculating and planning moves, taking up too much time. <br>
+                Starting with sandglasses, the items used for players to track 
+                time evolved gradually, from sandglasses to pendulums, then into the 
+                familiar modern clocks which have parallel timers and a button to press 
+                after each move.
+            </p>
+            
+            <!-- buttons for modern history timeline -->
+            <div class="ModernTimeline" id="timeline">
+                <ul>
+                    <li><button id="page1btn">1857-1886</button></li>
+                    <li><button id="page2btn">1886-1921</button></li>
+                    <li><button id="page3btn">1921-1945</button></li>
+                    <li><button id="page4btn">1945-1987</button></li>
+                    <li><button id="page5btn">1987-2013</button></li>
+                    <li><button id="page6btn">2013-now</button></li>
+                </ul>
+                <div class="pageContainer">
+                    <div class="page" id="page1">
+                        American Paul Morphy, an extraordinary chess prodigy, 
+                        won against all important competitors, including Anderssen, 
+                        during his short chess career between 1857 and 1863.<br>
+                        Through his success and innovative way of playing chess, he 
+                        pioneers an aggressive style of chess that was daring and reckless, 
+                        using a combination of impressive attacks and sound strategy.
+                    </div>
+                    <div class="page" id="page2">
+                        Wilheim Steinitz becomes the first official world chess champion in
+                        World Chess Championship (that is still running today) history. <br>His biggest
+                        contribution to chess was the advance of the game's strategic understanding 
+                        with clever use of bishops and knights to control the board. 
+                    </div>
+                    <div class="page" id="page3">
+                        Aron Nimzowitsch and Richard Réti revolutionizes chess by advocating for 
+                        control of the center board using distant pieces like bishops rather than 
+                        pawns, instead inviting the usage of pawns to attack the opponent's formation. 
+                        This introduces a layer of depth for players to consider during games, making 
+                        it more complex.
+                    </div>
+                    <div class="page" id="page4">
+                        Following the world war's end, an era of Soviet domination is ushered by 
+                        Russian Mikhail Botvinnik, where the only exception was an American, 
+                        Bobby Fischer's period in 1972-1975. <br>Despite breaking the mold and having 
+                        a chance to overturn this era of Soviet dominance, he refused to defend his 
+                        title going forward. Within this period, there were many changes made to 
+                        qualifications for the World Chess Championship.
+                    </div>
+                    <div class="page" id="page5">
+                        Soon after his first win and the beginning of his time at the top, Garry 
+                        Kasparov launches ChessBase, the first ever computer database program, 
+                        in collaboration with Frederic Friedel. <br>In 1996, Kasparov played a pair 
+                        of six-game exhibition matches against IBM supercomputer Deep Blue. 
+                        He won the first match 4-2 but lost the rematch 3½-2½(draws are counted as half). 
+                        This defeat symbolically heralded the arrival of chess engines playing at grandmaster strength.
+                    </div>
+                    <div class="page" id="page6">
+                        Magnus Carlsen wins his first championship in 2013, defending it 4 more times until 
+                        he refused to defend it in 2023. Within this period, chess gets a boost in 
+                        popularity through online platforms where people can play and match against others 
+                        worldwide for free. <br>The most popular websites feature quick pairing systems and 
+                        site-specific ratings for bullet, blitz, rapid, and/or classical time controls.
+                    </div>
+                </div>
+            </div>
+            
+            <!-- puzzle section class to modify the space it takes up in the page -->
+            <div class="puzzleSection" id="puzzle">
+                <h2>Mate in 2 puzzle solution demo</h2>
+                <button id="demoStart">Play demo</button>
+                <div class="puzzleContainer" id="puzzle_demo">
+                    <img src="images/chessboard.png" alt="chessboard background" width="360">
+                    <img id="black_rook" class="piece" src="images/black_rook.png" alt="black rook">
+                    <img id="black_king" class="piece" src="images/black_king.png" alt="black king">
+                    <img id="white_king" class="piece" src="images/white_king.png" alt="white_king">
+                    <img id="white_knight" class="piece" src="images/white_knight.png" alt="white_knight">
+                    <img id="white_pawn" class="piece" src="images/white_pawn.png" alt="white_pawn">
+                    <img id="white_rook" class="piece" src="images/white_rook.png" alt="white_rook">
+                    <img id="white_queen" class="piece" src="images/white_queen.png" alt="white_queen">
+                </div>                
+            </div>
+
+        </section>
+
+        <section class="topic" id="topic2">
+            <h2 class="topicTitle">Origin of chess</h2>
+            <p id="T2summary">
+                When it comes to the earliest roots of chess, its history goes way back to 7th 
+                century CE. At this point, chess looked rather different, with its main resemblance 
+                being in the core idea of using 4 unique pieces to strategically defeat the 
+                opponent. 
+            </p>
+            <div class="card hidden">
+                Originating in India, an early form of chess was developped in 7th century 
+                CE. Known as Chaturaṅga, it translates to "four divisions", representing 
+                infantry, cavalry, elephantry, chariotry. Later, these pieces would evolve 
+                into the modern versions being the pawn, knight, bishop and rook respectively.
+            </div>
+            <div class="card hidden">
+                Chess gets introduced to Persia in around 600 CE. Due to the differences in 
+                language, some name pronounciations could not be replicated in Persia. This led 
+                to developments like players calling "Shāh!" when attacking the king, and 
+                "Shāh! Māt!" when the king was attacked and had no way to escape.
+            </div>
+            <div class="card hidden">
+                After the Arab Muslims conquered the Persian Empire, chess gets spread to 
+                various muslim countries. Only a few changes were made to the game during this 
+                period, and they were mostly just changes in names or terms to fit the 
+                local language.
+            </div>
+            <div class="card hidden">
+                Chess eventually spreads to Europe, then to Russia, and subsequently to 
+                other countries in the world. Chess in Europe is developped with some rule 
+                changes, as well as the inroduction of new ones. Other countries instead 
+                decide to add their own spin, evolving the game into their own unique versions 
+                like Xiangqi in China and Shogi in Japan.
+            </div>
+
+            <form id="chessQuiz">
+                <h2>Chess Origins Quiz</h2>
+                <div>
+                    <p>1. What was the name of the early form of chess developed in 7th century India?</p>
+                    <label><input type="radio" name="q1" value="a"> Xiangqi</label><br>
+                    <label><input type="radio" name="q1" value="b"> Shogi</label><br>
+                    <label><input type="radio" name="q1" value="c"> Chaturaṅga</label><br>
+                    <label><input type="radio" name="q1" value="d"> Shatranj</label>
+                </div>
+                <div>
+                    <p>2. What does the term "Chaturaṅga" translate to?</p>
+                    <label><input type="radio" name="q2" value="a"> King's Game</label><br>
+                    <label><input type="radio" name="q2" value="b"> Four Divisions</label><br>
+                    <label><input type="radio" name="q2" value="c"> Army of Pieces</label><br>
+                    <label><input type="radio" name="q2" value="d"> Battle Board</label>
+                </div>
+                <div>
+                    <p>3. Which modern chess piece did the "elephantry" evolve into?</p>
+                    <label><input type="radio" name="q3" value="a"> Rook</label><br>
+                    <label><input type="radio" name="q3" value="b"> Knight</label><br>
+                    <label><input type="radio" name="q3" value="c"> Bishop</label><br>
+                    <label><input type="radio" name="q3" value="d"> Queen</label>
+                </div>
+                <div>
+                    <p>4. What phrase did Persian players say when putting the king in checkmate?</p>
+                    <label><input type="radio" name="q4" value="a"> Check!</label><br>
+                    <label><input type="radio" name="q4" value="b"> Māt!</label><br>
+                    <label><input type="radio" name="q4" value="c"> Shāh!</label><br>
+                    <label><input type="radio" name="q4" value="d"> Shāh! Māt!</label>
+                </div>
+                <div>
+                    <p>5. What happened to chess as it spread beyond Persia?</p>
+                    <label><input type="radio" name="q5" value="a"> It stayed completely unchanged</label><br>
+                    <label><input type="radio" name="q5" value="b"> It was banned by most countries</label><br>
+                    <label><input type="radio" name="q5" value="c"> Only the rules changed</label><br>
+                    <label><input type="radio" name="q5" value="d"> It evolved into many regional versions</label>
+                </div>
+                <button type="submit">Submit Quiz</button>
+                <p id="quizResult"></p>
+            </form>
+            
+        </section>
+
+        <section class="topic" id="topic3">
+            <h2 class="topicTitle">Famous Players</h2>
+            <p id="T3summary">
+                Despite the numerous chess champions throughout the years, few have stood out 
+                and really made a name for themselves. Be it through dominance or revolutionizing 
+                and advancing the game, these players stood out as the best of the best, 
+                considered by even grandmasters today as the greatest of all time.
+            </p>
+            <div class="profileContainer">
+                <button class="profilebtn" id="prevbtn">&lt;</button>
+                <button class="profilebtn" id="nextbtn">&gt;</button>
+                <div class="profile" id="player1">
+                    <h2>Bobby Fischer</h2>
+                    Bobby Fischer became a great player from a young age, being the youngest 
+                    to win the U.S Chess Championship in 1957/1958. He proceeds to win the next 
+                    8 U.S Chess Championships that he participates in, and achieves a perfect 
+                    win in the 1963/1964 championship.<br>
+                    Later on, he accomplishes an all time record of 20 consecutive wins in 
+                    World Chess Championship qualifying events from 1970-1971 before going on 
+                    to win the championship in 1972. This win was an outlier, with the past champions 
+                    in recent years being all Soviets and having the odds stacked against him.<br>
+                    American chess players had less support compared to Soviets, with the latter 
+                    receiving state support. In addition, America had far less players at 5000, 
+                    compared to the 5000000 of the Soviets, making his training even harder.<br>
+                    Despite his strength, Fischer refused to defend his title in 1975 and stepped 
+                    away from the chess scene till 1992 due to disagreements with FIDE, who is the 
+                    governing body for the World Chess Championship.
+                </div>
+                <div class="profile" id="player2">
+                    <h2>Garry Kasparov</h2>
+                    Garry Kasparov was recognized as a prodigy from a young age, winning both top-level 
+                    junior & adult events, including 2 first-place ties at the USSR Championship as a 
+                    teen.<br>
+                    He went on to defeat Karpov, the reigning chess champion at the time, at age 22 to 
+                    become the youngest word chess champion ever.<br>
+                    Later, Kasparov would break away from FIDE's jurisdiction, forming his own Professional 
+                    Chess Association. He, like Bobby Fischer, disagreed with FIDE's management and additionally 
+                    suspected there was corruption within the organisation.<br>
+                    During this split, he would aid in the development of chess engines, as well as play 
+                    2 of the most iconic and well-publicized chess engine face offs. Currently, chess 
+                    engines are widely used for players of all skill levels to practice.<br>
+                    He would also later go on to coach Magnus Carlsen, the greatest chess player of today, 
+                    for a year in 2009.
+                </div>
+                <div class="profile" id="player3">
+                    <h2>Magnus Carlsen</h2>
+                    Magnus CarlSen is known as one of the most dominant players in chess history, as is 
+                    evident by his sheer number of accolades. One prime example of his skill being the 
+                    youngest chess grandmaster in the world at 13 years old in 2010. The title of 
+                    grandmaster is something only achieved by players in their late teens or early twenties.<br>
+                    Currently, he is a five-time world chess champion (until he refused to defend his 
+                    title in 2023), five-time world rapid chess champion and reigning world blitz chess 
+                    champion.<br>
+                    He surpassed the FIDE rating of 2800 at age 18, the youngest at the time to do so, 
+                    then going on to reach No.1 in the FIDE world ranking at age 19, the youngest ever to do so. <br>
+                    Despite stepping away from the championship in 2023, people never doubted his abilities 
+                    as the best, some even joking that he stepped away because he was bored of winning, which 
+                    is half true as he claimed to have no motivation.
+                </div>
+            </div>
+
+            <h2 id="MM_title">Memory Match (chess pieces)</h2>
+            <div class="MemoryMatch" id="gameBoard"></div>
+                       
+        </section>
+    </main>
+
+    <aside id="Aside">
+        
+    </aside>
+</body>
+</html>
