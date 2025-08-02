@@ -20,8 +20,8 @@ const nextbtn=document.getElementById("nextbtn");
 
 var allpages=document.querySelectorAll(".page");
 
-const moveAudio = new Audio(src="audio/Move.mp3");
-const captureAudio = new Audio(src="audio/Capture.mp3");
+const moveAudio = new Audio("audio/Move.mp3");
+const captureAudio = new Audio("audio/Capture.mp3");
 
 const menuItemsList=document.querySelector("ul");
 const hamBtn=document.querySelector("#hamIcon");
